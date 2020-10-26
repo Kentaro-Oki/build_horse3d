@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<robot name="horse3d">
+    
+    <joint name="fixed" type="fixed">
+        <parent link="link1"/>
+        <child link="link2"/>
+    </joint>
+
+     <!-- Base Link -->
+    <link name="link1">
+        <collision>
+            <origin xyz="0 0 0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.1 0.1 1.0"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.1 0.1 1.0"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1.0 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="link2">
+        <collision>
+            <origin xyz="0 0 0.5" rpy="0 1.57 0"/>
+            <geometry>
+                <box size="0.1 0.1 1.0"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 0.5" rpy="0 1.57 0"/>
+            <geometry>
+                <box size="0.1 0.1 1.0"/>
+            </geometry>
+            <material name="green">
+                <color rgba="0.0 1.0 0.0 1.0"/>
+            </material>
+        </visual>
+    </link>
+</robot>
