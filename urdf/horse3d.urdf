@@ -1,37 +1,347 @@
 <?xml version="1.0"?>
 <robot name="horse3d">
-    <link name="base_link">
+
+
+    <!-- Colors -->
+    <material name="red">
+        <color rgba="0.8 0 0 1"/>
+    </material>
+    <material name="green">
+        <color rgba="0 0.8 0 1"/>
+    </material>
+    <material name="blue">
+        <color rgba="0 0 0.8 1"/>
+    </material>
+    <material name="yellow">
+        <color rgba="0.8 0.8 0 1"/>
+    </material>
+
+
+    <!-- Links -->
+    <!-- Body -->
+    <link name="thoracic_front">
         <visual>
             <geometry>
-                <cylinder radius="0.2" length="0.6"/>
+                <sphere radius="0.245"/>
             </geometry>
-            <color rgba="0.0 0.0 1.0 0.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="yellow"/>
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.2" length="0.6"/>
+                <sphere radius="0.245"/>
             </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         </collision>
     </link>
 
-    <link name="right_leg">
+    <link name="thoracic_back">
         <visual>
             <geometry>
-                <box size="0.6 0.1 0.2"/>
+                <sphere radius="0.22"/>
             </geometry>
-            <origin xyz="0.0 0.0 -0.3" rpy="0.0 1.57075 0.0"/>
+            <origin xyz="-0.14 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="yellow"/>
         </visual>
         <collision>
             <geometry>
-                <box size="0.6 0.1 -0.2"/>
+                <sphere radius="0.22"/>
             </geometry>
-            <origin xyz="0.0 0.0 -0.3" rpy="0.0 1.57075 0.0"/>
+            <origin xyz="-0.14 0.0 0.0" rpy="0.0 0.0 0.0"/>
         </collision>
     </link>
 
-    <joint name="base_to_right_leg" type="fixed">
-        <parent link="base_link"/>
-        <child link="right_leg"/>
-        <origin xyz="0.0 -0.22 0.25" rpy="0.0 0.0 0.0"/>
+    <link name="lumbar_vX"/>
+    <link name="lumbar_vY"/>
+    <link name="lumbar">
+        <visual>
+            <geometry>
+                <sphere radius="0.095"/>
+            </geometry>
+            <origin xyz="-0.09 0.0 -0.017" rpy="0.0 0.0 0.0"/>
+            <material name="yellow"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.095"/>
+            </geometry>
+            <origin xyz="-0.09 0.0 -0.017" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+    <link name="pelvis_vX"/>
+    <link name="pelvis_vY"/>
+    <link name="pelvis">
+        <visual>
+            <geometry>
+                <sphere radius="0.205"/>
+            </geometry>
+            <origin xyz="-0.153 0.0 -0.133" rpy="0.0 0.0 0.0"/>
+            <material name="yellow"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.205"/>
+            </geometry>
+            <origin xyz="-0.153 0.0 -0.133" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+    <!-- Foreleft leg -->
+    <link name="scapula_left_vX"/>
+    <link name="scapula_left_vY"/>
+    <link name="scapula_left">
+        <visual>
+            <geometry>
+                <capsule length="0.325" radius="0.0365"/>
+            </geometry>
+            <origin xyz="0.1625 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.325" radius="0.0365"/>
+            </geometry>
+            <origin xyz="0.1625 0.0 0.0" rpy="0.0 1.57 0.0"/>
+        </collision>
+    </link>
+
+    <link name="humerus_left_vX"/>
+    <link name="humerus_left_vY"/>
+    <link name="humerus_left">
+        <visual>
+            <geometry>
+                <capsule length="0.250" radius="0.033"/>
+            </geometry>
+            <origin xyz="0.125 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.250" radius="0.033"/>
+            </geometry>
+            <origin xyz="0.125 0.0 0.0" rpy="0.0 1.57 0.0"/>
+        </collision>
+    </link>
+
+    <link name="radius_left">
+        <visual>
+            <geometry>
+                <capsule length="0.370" radius="0.0375"/>
+            </geometry>
+            <origin xyz="0.185 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.370" radius="0.0375"/>
+            </geometry>
+            <origin xyz="0.185 0.0 0.0" rpy="0.0 1.57 0.0"/>
+        </collision>
+    </link>
+
+    <link name="carpas_left_vX"/>
+    <link name="carpas_left_vY"/>
+    <link name="carpas_left">
+        <visual>
+            <geometry>
+                <capsule length="0.235" radius="0.025"/>
+            </geometry>
+            <origin xyz="0.1175 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.235" radius="0.025"/>
+            </geometry>
+            <origin xyz="0.1175 0.0 0.0" rpy="0.0 1.57 0.0"/>
+        </collision>
+    </link>
+
+    <link name="pastern_foreleft_vX"/>
+    <link name="pastern_foreleft">
+        <visual>
+            <geometry>
+                <capsule length="0.114" radius="0.02"/>
+            </geometry>
+            <origin xyz="0.057 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.114" radius="0.02"/>
+            </geometry>
+            <origin xyz="0.057 0.0 0.0" rpy="0.0 1.57 0.0"/>
+        </collision>
+    </link>
+
+    <link name="coffin_foreleft">
+        <visual>
+            <geometry>
+                <box size="0.11 0.078 0.048"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.11 0.078 0.048"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+
+    <!-- Hindleft leg -->
+
+
+    <!-- Joints -->
+    <!-- Body -->
+    <joint name="j_thoracic" type="fixed">
+        <parent link="thoracic_front"/>
+        <child link="thoracic_back"/>
+        <origin xyz="-0.18 0 0" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="j_lumbar_roll" type="revolute">
+        <parent link="thoracic_back"/>
+        <child link="lumbar_vX"/>
+        <origin xyz="-0.30 0 0.17" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_lumbar_pitch" type="revolute">
+        <parent link="lumbar_vX"/>
+        <child link="lumbar_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_lumbar_yaw" type="revolute">
+        <parent link="lumbar_vY"/>
+        <child link="lumbar"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_pelvis_roll" type="revolute">
+        <parent link="lumbar"/>
+        <child link="pelvis_vX"/>
+        <origin xyz="-0.178 0 0.013" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_pelvis_pitch" type="revolute">
+        <parent link="pelvis_vX"/>
+        <child link="pelvis_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_pelvis_yaw" type="revolute">
+        <parent link="pelvis_vY"/>
+        <child link="pelvis"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <!-- Foreleft leg -->
+    <joint name="j_scapula_left_roll" type="revolute">
+        <parent link="thoracic_front"/>
+        <child link="scapula_left_vX"/>
+        <origin xyz="0.0164 0.145 0.222" rpy="0.0 0.825 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_scapula_left_pitch" type="revolute">
+        <parent link="scapula_left_vX"/>
+        <child link="scapula_left_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_scapula_left_yaw" type="revolute">
+        <parent link="scapula_left_vY"/>
+        <child link="scapula_left"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_humerus_left_roll" type="revolute">
+        <parent link="scapula_left"/>
+        <child link="humerus_left_vX"/>
+        <origin xyz="0.325 0 0.0" rpy="0.0 1.3148 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_humerus_left_pitch" type="revolute">
+        <parent link="humerus_left_vX"/>
+        <child link="humerus_left_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_humerus_left_yaw" type="revolute">
+        <parent link="humerus_left_vY"/>
+        <child link="humerus_left"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_radius_left" type="revolute">
+        <parent link="humerus_left"/>
+        <child link="radius_left"/>
+        <origin xyz="0.250 0 0.0" rpy="0.0 -0.6291 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="j_carpas_left_roll" type="revolute">
+        <parent link="radius_left"/>
+        <child link="carpas_left_vX"/>
+        <origin xyz="0.370 0 0.0" rpy="0.0 0.11 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_carpas_left_pitch" type="revolute">
+        <parent link="carpas_left_vX"/>
+        <child link="carpas_left_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_carpas_left_yaw" type="revolute">
+        <parent link="carpas_left_vY"/>
+        <child link="carpas_left"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_pastern_foreleft_roll" type="revolute">
+        <parent link="carpas_left"/>
+        <child link="pastern_foreleft_vX"/>
+        <origin xyz="0.235 0 0.0" rpy="0.0 -0.582 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_pastern_foreleft_pitch" type="revolute">
+        <parent link="pastern_foreleft_vX"/>
+        <child link="pastern_foreleft"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="j_coffin_foreleft" type="revolute">
+        <parent link="pastern_foreleft"/>
+        <child link="coffin_foreleft"/>
+        <origin xyz="0.114 0 0.0" rpy="0.0 -1.04 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
     </joint>
 </robot>
