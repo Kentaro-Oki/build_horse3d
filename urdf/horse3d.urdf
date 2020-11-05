@@ -59,7 +59,7 @@
                 <sphere radius="0.095"/>
             </geometry>
             <origin xyz="-0.09 0.0 -0.017" rpy="0.0 0.0 0.0"/>
-            <material name="yellow"/>
+            <material name="red"/>
         </visual>
         <collision>
             <geometry>
@@ -147,7 +147,7 @@
                 <capsule length="0.245" radius="0.026"/>
             </geometry>
             <origin xyz="0.1225 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="blue"/>
+            <material name="green"/>
         </visual>
         <collision>
             <geometry>
@@ -185,7 +185,7 @@
                 <capsule length="0.250" radius="0.033"/>
             </geometry>
             <origin xyz="0.125 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="blue"/>
+            <material name="red"/>
         </visual>
         <collision>
             <geometry>
@@ -219,7 +219,7 @@
                 <capsule length="0.235" radius="0.025"/>
             </geometry>
             <origin xyz="0.1175 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="blue"/>
+            <material name="red"/>
         </visual>
         <collision>
             <geometry>
@@ -236,7 +236,7 @@
                 <capsule length="0.114" radius="0.02"/>
             </geometry>
             <origin xyz="0.057 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="green"/>
+            <material name="blue"/>
         </visual>
         <collision>
             <geometry>
@@ -289,7 +289,7 @@
                 <capsule length="0.250" radius="0.033"/>
             </geometry>
             <origin xyz="0.125 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="blue"/>
+            <material name="red"/>
         </visual>
         <collision>
             <geometry>
@@ -323,7 +323,7 @@
                 <capsule length="0.235" radius="0.025"/>
             </geometry>
             <origin xyz="0.1175 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="blue"/>
+            <material name="red"/>
         </visual>
         <collision>
             <geometry>
@@ -340,7 +340,7 @@
                 <capsule length="0.114" radius="0.02"/>
             </geometry>
             <origin xyz="0.057 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="green"/>
+            <material name="blue"/>
         </visual>
         <collision>
             <geometry>
@@ -375,7 +375,7 @@
                 <capsule length="0.306" radius="0.040"/>
             </geometry>
             <origin xyz="0.153 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="blue"/>
+            <material name="red"/>
         </visual>
         <collision>
             <geometry>
@@ -409,7 +409,7 @@
                 <capsule length="0.26" radius="0.021"/>
             </geometry>
             <origin xyz="0.13 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="blue"/>
+            <material name="red"/>
         </visual>
         <collision>
             <geometry>
@@ -426,7 +426,7 @@
                 <capsule length="0.11" radius="0.02"/>
             </geometry>
             <origin xyz="0.065 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="green"/>
+            <material name="blue"/>
         </visual>
         <collision>
             <geometry>
@@ -461,7 +461,7 @@
                 <capsule length="0.306" radius="0.040"/>
             </geometry>
             <origin xyz="0.153 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="blue"/>
+            <material name="red"/>
         </visual>
         <collision>
             <geometry>
@@ -495,7 +495,7 @@
                 <capsule length="0.26" radius="0.021"/>
             </geometry>
             <origin xyz="0.13 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="blue"/>
+            <material name="red"/>
         </visual>
         <collision>
             <geometry>
@@ -512,7 +512,7 @@
                 <capsule length="0.11" radius="0.02"/>
             </geometry>
             <origin xyz="0.065 0.0 0.0" rpy="0.0 1.5708 0.0"/>
-            <material name="green"/>
+            <material name="blue"/>
         </visual>
         <collision>
             <geometry>
