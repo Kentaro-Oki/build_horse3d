@@ -87,6 +87,77 @@
         </collision>
     </link>
 
+    <link name="neck_vX"/>
+    <link name="neck_vY"/>
+    <link name="neck">
+        <visual>
+            <geometry>
+                <capsule length="0.443" radius="0.05"/>
+            </geometry>
+            <origin xyz="0.2215 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.443" radius="0.05"/>
+            </geometry>
+            <origin xyz="0.2215 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="head_vX"/>
+    <link name="head_vY"/>
+    <link name="head">
+        <visual>
+            <geometry>
+                <box size="0.4419 0.1861 0.2474"/>
+            </geometry>
+            <origin xyz="0.2204 0.0 0.1237" rpy="0.0 0.0 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.4419 0.1861 0.2474"/>
+            </geometry>
+            <origin xyz="0.2204 0.0 0.1237" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+    <link name="tail_front_vX"/>
+    <link name="tail_front">
+        <visual>
+            <geometry>
+                <capsule length="0.245" radius="0.026"/>
+            </geometry>
+            <origin xyz="0.1225 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.245" radius="0.026"/>
+            </geometry>
+            <origin xyz="0.1225 0.0 0.0" rpy="0.0 1.5078 0.0"/>
+        </collision>
+    </link>
+
+    <link name="tail_back_vX"/>
+    <link name="tail_back">
+        <visual>
+            <geometry>
+                <capsule length="0.245" radius="0.026"/>
+            </geometry>
+            <origin xyz="0.1225 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.245" radius="0.026"/>
+            </geometry>
+            <origin xyz="0.1225 0.0 0.0" rpy="0.0 1.5078 0.0"/>
+        </collision>
+    </link>
+
+
     <!-- Foreleft leg -->
     <link name="scapula_left_vX"/>
     <link name="scapula_left_vY"/>
@@ -95,14 +166,14 @@
             <geometry>
                 <capsule length="0.325" radius="0.0365"/>
             </geometry>
-            <origin xyz="0.1625 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <origin xyz="0.1625 0.0 0.0" rpy="0.0 1.5708 0.0"/>
             <material name="blue"/>
         </visual>
         <collision>
             <geometry>
                 <capsule length="0.325" radius="0.0365"/>
             </geometry>
-            <origin xyz="0.1625 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <origin xyz="0.1625 0.0 0.0" rpy="0.0 1.5708 0.0"/>
         </collision>
     </link>
 
@@ -113,14 +184,14 @@
             <geometry>
                 <capsule length="0.250" radius="0.033"/>
             </geometry>
-            <origin xyz="0.125 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <origin xyz="0.125 0.0 0.0" rpy="0.0 1.5708 0.0"/>
             <material name="blue"/>
         </visual>
         <collision>
             <geometry>
                 <capsule length="0.250" radius="0.033"/>
             </geometry>
-            <origin xyz="0.125 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <origin xyz="0.125 0.0 0.0" rpy="0.0 1.5708 0.0"/>
         </collision>
     </link>
 
@@ -129,14 +200,14 @@
             <geometry>
                 <capsule length="0.370" radius="0.0375"/>
             </geometry>
-            <origin xyz="0.185 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <origin xyz="0.185 0.0 0.0" rpy="0.0 1.5708 0.0"/>
             <material name="blue"/>
         </visual>
         <collision>
             <geometry>
                 <capsule length="0.370" radius="0.0375"/>
             </geometry>
-            <origin xyz="0.185 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <origin xyz="0.185 0.0 0.0" rpy="0.0 1.5708 0.0"/>
         </collision>
     </link>
 
@@ -147,14 +218,14 @@
             <geometry>
                 <capsule length="0.235" radius="0.025"/>
             </geometry>
-            <origin xyz="0.1175 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <origin xyz="0.1175 0.0 0.0" rpy="0.0 1.5708 0.0"/>
             <material name="blue"/>
         </visual>
         <collision>
             <geometry>
                 <capsule length="0.235" radius="0.025"/>
             </geometry>
-            <origin xyz="0.1175 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <origin xyz="0.1175 0.0 0.0" rpy="0.0 1.5708 0.0"/>
         </collision>
     </link>
 
@@ -164,14 +235,14 @@
             <geometry>
                 <capsule length="0.114" radius="0.02"/>
             </geometry>
-            <origin xyz="0.057 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <origin xyz="0.057 0.0 0.0" rpy="0.0 1.5708 0.0"/>
             <material name="green"/>
         </visual>
         <collision>
             <geometry>
                 <capsule length="0.114" radius="0.02"/>
             </geometry>
-            <origin xyz="0.057 0.0 0.0" rpy="0.0 1.57 0.0"/>
+            <origin xyz="0.057 0.0 0.0" rpy="0.0 1.5708 0.0"/>
         </collision>
     </link>
 
@@ -191,8 +262,281 @@
         </collision>
     </link>
 
+    <!-- Foreright leg -->
+    <link name="scapula_right_vX"/>
+    <link name="scapula_right_vY"/>
+    <link name="scapula_right">
+        <visual>
+            <geometry>
+                <capsule length="0.325" radius="0.0365"/>
+            </geometry>
+            <origin xyz="0.1625 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.325" radius="0.0365"/>
+            </geometry>
+            <origin xyz="0.1625 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="humerus_right_vX"/>
+    <link name="humerus_right_vY"/>
+    <link name="humerus_right">
+        <visual>
+            <geometry>
+                <capsule length="0.250" radius="0.033"/>
+            </geometry>
+            <origin xyz="0.125 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.250" radius="0.033"/>
+            </geometry>
+            <origin xyz="0.125 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="radius_right">
+        <visual>
+            <geometry>
+                <capsule length="0.370" radius="0.0375"/>
+            </geometry>
+            <origin xyz="0.185 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.370" radius="0.0375"/>
+            </geometry>
+            <origin xyz="0.185 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="carpas_right_vX"/>
+    <link name="carpas_right_vY"/>
+    <link name="carpas_right">
+        <visual>
+            <geometry>
+                <capsule length="0.235" radius="0.025"/>
+            </geometry>
+            <origin xyz="0.1175 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.235" radius="0.025"/>
+            </geometry>
+            <origin xyz="0.1175 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="pastern_foreright_vX"/>
+    <link name="pastern_foreright">
+        <visual>
+            <geometry>
+                <capsule length="0.114" radius="0.02"/>
+            </geometry>
+            <origin xyz="0.057 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.114" radius="0.02"/>
+            </geometry>
+            <origin xyz="0.057 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="coffin_foreright">
+        <visual>
+            <geometry>
+                <box size="0.11 0.078 0.048"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.11 0.078 0.048"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
 
     <!-- Hindleft leg -->
+    <link name="femur_left_vX"/>
+    <link name="femur_left_vY"/>
+    <link name="femur_left">
+        <visual>
+            <geometry>
+                <capsule length="0.306" radius="0.040"/>
+            </geometry>
+            <origin xyz="0.153 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.306" radius="0.040"/>
+            </geometry>
+            <origin xyz="0.153 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="tibia_left">
+        <visual>
+            <geometry>
+                <capsule length="0.36" radius="0.030"/>
+            </geometry>
+            <origin xyz="0.18 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.36" radius="0.030"/>
+            </geometry>
+            <origin xyz="0.18 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="tarsal_left_vX"/>
+    <link name="tarsal_left_vY"/>
+    <link name="tarsal_left">
+        <visual>
+            <geometry>
+                <capsule length="0.26" radius="0.021"/>
+            </geometry>
+            <origin xyz="0.13 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.26" radius="0.021"/>
+            </geometry>
+            <origin xyz="0.13 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="pastern_hindleft_vX"/>
+    <link name="pastern_hindleft">
+        <visual>
+            <geometry>
+                <capsule length="0.11" radius="0.02"/>
+            </geometry>
+            <origin xyz="0.065 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.11" radius="0.02"/>
+            </geometry>
+            <origin xyz="0.065 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="coffin_hindleft">
+        <visual>
+            <geometry>
+                <box size="0.11 0.078 0.048"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.11 0.078 0.048"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+    <!-- Hindright leg -->
+    <link name="femur_right_vX"/>
+    <link name="femur_right_vY"/>
+    <link name="femur_right">
+        <visual>
+            <geometry>
+                <capsule length="0.306" radius="0.040"/>
+            </geometry>
+            <origin xyz="0.153 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.306" radius="0.040"/>
+            </geometry>
+            <origin xyz="0.153 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="tibia_right">
+        <visual>
+            <geometry>
+                <capsule length="0.36" radius="0.030"/>
+            </geometry>
+            <origin xyz="0.18 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.36" radius="0.030"/>
+            </geometry>
+            <origin xyz="0.18 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="tarsal_right_vX"/>
+    <link name="tarsal_right_vY"/>
+    <link name="tarsal_right">
+        <visual>
+            <geometry>
+                <capsule length="0.26" radius="0.021"/>
+            </geometry>
+            <origin xyz="0.13 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.26" radius="0.021"/>
+            </geometry>
+            <origin xyz="0.13 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="pastern_hindright_vX"/>
+    <link name="pastern_hindright">
+        <visual>
+            <geometry>
+                <capsule length="0.11" radius="0.02"/>
+            </geometry>
+            <origin xyz="0.065 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="0.11" radius="0.02"/>
+            </geometry>
+            <origin xyz="0.065 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        </collision>
+    </link>
+
+    <link name="coffin_hindright">
+        <visual>
+            <geometry>
+                <box size="0.11 0.078 0.048"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.11 0.078 0.048"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
 
 
     <!-- Joints -->
@@ -207,21 +551,21 @@
         <parent link="thoracic_back"/>
         <child link="lumbar_vX"/>
         <origin xyz="-0.30 0 0.17" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.2" upper="0.2" effort="0.0" velocity="0.0"/>
         <axis xyz="1 0 0"/>
     </joint>
     <joint name="j_lumbar_pitch" type="revolute">
         <parent link="lumbar_vX"/>
         <child link="lumbar_vY"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.2" upper="0.2" effort="0.0" velocity="0.0"/>
         <axis xyz="0 1 0"/>
     </joint>
     <joint name="j_lumbar_yaw" type="revolute">
         <parent link="lumbar_vY"/>
         <child link="lumbar"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.2" upper="0.2" effort="0.0" velocity="0.0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -229,19 +573,93 @@
         <parent link="lumbar"/>
         <child link="pelvis_vX"/>
         <origin xyz="-0.178 0 0.013" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.2" upper="0.2" effort="0.0" velocity="0.0"/>
         <axis xyz="1 0 0"/>
     </joint>
     <joint name="j_pelvis_pitch" type="revolute">
         <parent link="pelvis_vX"/>
         <child link="pelvis_vY"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.2" upper="0.2" effort="0.0" velocity="0.0"/>
         <axis xyz="0 1 0"/>
     </joint>
     <joint name="j_pelvis_yaw" type="revolute">
         <parent link="pelvis_vY"/>
         <child link="pelvis"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.2" upper="0.2" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_neck_roll" type="revolute">
+        <parent link="thoracic_front"/>
+        <child link="neck_vX"/>
+        <origin xyz="0.201 0 0.130" rpy="0.0 -1.0 0.0"/>
+        <limit lower="-0.5" upper="0.5" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_neck_pitch" type="revolute">
+        <parent link="neck_vX"/>
+        <child link="neck_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="0.5" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_neck_yaw" type="revolute">
+        <parent link="neck_vY"/>
+        <child link="neck"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="0.5" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_head_roll" type="revolute">
+        <parent link="neck"/>
+        <child link="head_vX"/>
+        <origin xyz="0.443 0 0.0" rpy="0.0 1.8567 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_head_pitch" type="revolute">
+        <parent link="head_vX"/>
+        <child link="head_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="0.5" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_head_yaw" type="revolute">
+        <parent link="head_vY"/>
+        <child link="head"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="0.5" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_tail_front_pitch" type="revolute">
+        <parent link="pelvis"/>
+        <child link="tail_front_vX"/>
+        <origin xyz="-0.259 0 0.0314" rpy="0.0 2.6 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_tail_front_yaw" type="revolute">
+        <parent link="tail_front_vX"/>
+        <child link="tail_front"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_tail_back_pitch" type="revolute">
+        <parent link="tail_front"/>
+        <child link="tail_back_vX"/>
+        <origin xyz="0.245 0 0.0" rpy="0.0 -0.3935 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_tail_back_yaw" type="revolute">
+        <parent link="tail_back_vX"/>
+        <child link="tail_back"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
         <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
         <axis xyz="0 0 1"/>
@@ -252,21 +670,21 @@
         <parent link="thoracic_front"/>
         <child link="scapula_left_vX"/>
         <origin xyz="0.0164 0.145 0.222" rpy="0.0 0.825 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.2" upper="0.2" effort="0.0" velocity="0.0"/>
         <axis xyz="1 0 0"/>
     </joint>
     <joint name="j_scapula_left_pitch" type="revolute">
         <parent link="scapula_left_vX"/>
         <child link="scapula_left_vY"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.2" upper="0.2" effort="0.0" velocity="0.0"/>
         <axis xyz="0 1 0"/>
     </joint>
     <joint name="j_scapula_left_yaw" type="revolute">
         <parent link="scapula_left_vY"/>
         <child link="scapula_left"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -274,21 +692,21 @@
         <parent link="scapula_left"/>
         <child link="humerus_left_vX"/>
         <origin xyz="0.325 0 0.0" rpy="0.0 1.3148 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
         <axis xyz="1 0 0"/>
     </joint>
     <joint name="j_humerus_left_pitch" type="revolute">
         <parent link="humerus_left_vX"/>
         <child link="humerus_left_vY"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.7" upper="0.2" effort="0.0" velocity="0.0"/>
         <axis xyz="0 1 0"/>
     </joint>
     <joint name="j_humerus_left_yaw" type="revolute">
         <parent link="humerus_left_vY"/>
         <child link="humerus_left"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -296,7 +714,7 @@
         <parent link="humerus_left"/>
         <child link="radius_left"/>
         <origin xyz="0.250 0 0.0" rpy="0.0 -0.6291 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.6" upper="0.6" effort="0.0" velocity="0.0"/>
         <axis xyz="0 1 0"/>
     </joint>
 
@@ -304,21 +722,21 @@
         <parent link="radius_left"/>
         <child link="carpas_left_vX"/>
         <origin xyz="0.370 0 0.0" rpy="0.0 0.11 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.05" upper="0.05" effort="0.0" velocity="0.0"/>
         <axis xyz="1 0 0"/>
     </joint>
     <joint name="j_carpas_left_pitch" type="revolute">
         <parent link="carpas_left_vX"/>
         <child link="carpas_left_vY"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="0." upper="0.8" effort="0.0" velocity="0.0"/>
         <axis xyz="0 1 0"/>
     </joint>
     <joint name="j_carpas_left_yaw" type="revolute">
         <parent link="carpas_left_vY"/>
         <child link="carpas_left"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.05" upper="0.05" effort="0.0" velocity="0.0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -326,14 +744,14 @@
         <parent link="carpas_left"/>
         <child link="pastern_foreleft_vX"/>
         <origin xyz="0.235 0 0.0" rpy="0.0 -0.582 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
         <axis xyz="1 0 0"/>
     </joint>
     <joint name="j_pastern_foreleft_pitch" type="revolute">
         <parent link="pastern_foreleft_vX"/>
         <child link="pastern_foreleft"/>
         <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.5" upper="1" effort="0.0" velocity="0.0"/>
         <axis xyz="0 1 0"/>
     </joint>
 
@@ -341,7 +759,257 @@
         <parent link="pastern_foreleft"/>
         <child link="coffin_foreleft"/>
         <origin xyz="0.114 0 0.0" rpy="0.0 -1.04 0.0"/>
-        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <!-- Foreright leg -->
+    <joint name="j_scapula_right_roll" type="revolute">
+        <parent link="thoracic_front"/>
+        <child link="scapula_right_vX"/>
+        <origin xyz="0.0164 -0.145 0.222" rpy="0.0 0.825 0.0"/>
+        <limit lower="-0.2" upper="0.2" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_scapula_right_pitch" type="revolute">
+        <parent link="scapula_right_vX"/>
+        <child link="scapula_right_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.2" upper="0.2" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_scapula_right_yaw" type="revolute">
+        <parent link="scapula_right_vY"/>
+        <child link="scapula_right"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_humerus_right_roll" type="revolute">
+        <parent link="scapula_right"/>
+        <child link="humerus_right_vX"/>
+        <origin xyz="0.325 0 0.0" rpy="0.0 1.3148 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_humerus_right_pitch" type="revolute">
+        <parent link="humerus_right_vX"/>
+        <child link="humerus_right_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.7" upper="0.2" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_humerus_right_yaw" type="revolute">
+        <parent link="humerus_right_vY"/>
+        <child link="humerus_right"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_radius_right" type="revolute">
+        <parent link="humerus_right"/>
+        <child link="radius_right"/>
+        <origin xyz="0.250 0 0.0" rpy="0.0 -0.6291 0.0"/>
+        <limit lower="-0.6" upper="0.6" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="j_carpas_right_roll" type="revolute">
+        <parent link="radius_right"/>
+        <child link="carpas_right_vX"/>
+        <origin xyz="0.370 0 0.0" rpy="0.0 0.11 0.0"/>
+        <limit lower="-0.05" upper="0.05" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_carpas_right_pitch" type="revolute">
+        <parent link="carpas_right_vX"/>
+        <child link="carpas_right_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="0." upper="0.8" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_carpas_right_yaw" type="revolute">
+        <parent link="carpas_right_vY"/>
+        <child link="carpas_right"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.05" upper="0.05" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_pastern_foreright_roll" type="revolute">
+        <parent link="carpas_right"/>
+        <child link="pastern_foreright_vX"/>
+        <origin xyz="0.235 0 0.0" rpy="0.0 -0.582 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_pastern_foreright_pitch" type="revolute">
+        <parent link="pastern_foreright_vX"/>
+        <child link="pastern_foreright"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="j_coffin_foreright" type="revolute">
+        <parent link="pastern_foreright"/>
+        <child link="coffin_foreright"/>
+        <origin xyz="0.114 0 0.0" rpy="0.0 -1.04 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <!-- Hindleft leg -->
+    <joint name="j_femur_left_roll" type="revolute">
+        <parent link="pelvis"/>
+        <child link="femur_left_vX"/>
+        <origin xyz="-0.1935 0.189 -0.14705" rpy="0.0 1.2726 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_femur_left_pitch" type="revolute">
+        <parent link="femur_left_vX"/>
+        <child link="femur_left_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_femur_left_yaw" type="revolute">
+        <parent link="femur_left_vY"/>
+        <child link="femur_left"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_tibia_left" type="revolute">
+        <parent link="femur_left"/>
+        <child link="tibia_left"/>
+        <origin xyz="0.306, 0, 0.0" rpy="0.0 0.80176, 0.0"/>
+        <limit lower="-0.5" upper="0.5" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="j_tarsal_left_roll" type="revolute">
+        <parent link="tibia_left"/>
+        <child link="tarsal_left_vX"/>
+        <origin xyz="0.36, 0, 0.0" rpy="0.0 -0.47825 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_tarsal_left_pitch" type="revolute">
+        <parent link="tarsal_left_vX"/>
+        <child link="tarsal_left_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="0.5" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_tarsal_left_yaw" type="revolute">
+        <parent link="tarsal_left_vY"/>
+        <child link="tarsal_left"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_pastern_hindleft_roll" type="revolute">
+        <parent link="tarsal_left"/>
+        <child link="pastern_hindleft_vX"/>
+        <origin xyz="0.26 0 0.0" rpy="0.0 -0.582 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_pastern_hindleft_pitch" type="revolute">
+        <parent link="pastern_hindleft_vX"/>
+        <child link="pastern_hindleft"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="j_coffin_hindleft" type="revolute">
+        <parent link="pastern_hindleft"/>
+        <child link="coffin_hindleft"/>
+        <origin xyz="0.114 0 0.0" rpy="0.0 -1.03 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <!-- Hindright leg -->
+    <joint name="j_femur_right_roll" type="revolute">
+        <parent link="pelvis"/>
+        <child link="femur_right_vX"/>
+        <origin xyz="-0.1935 -0.189 -0.14705" rpy="0.0 1.2726 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_femur_right_pitch" type="revolute">
+        <parent link="femur_right_vX"/>
+        <child link="femur_right_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_femur_right_yaw" type="revolute">
+        <parent link="femur_right_vY"/>
+        <child link="femur_right"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_tibia_right" type="revolute">
+        <parent link="femur_right"/>
+        <child link="tibia_right"/>
+        <origin xyz="0.306, 0, 0.0" rpy="0.0 0.80176, 0.0"/>
+        <limit lower="-0.5" upper="0.5" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="j_tarsal_right_roll" type="revolute">
+        <parent link="tibia_right"/>
+        <child link="tarsal_right_vX"/>
+        <origin xyz="0.36, 0, 0.0" rpy="0.0 -0.47825 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_tarsal_right_pitch" type="revolute">
+        <parent link="tarsal_right_vX"/>
+        <child link="tarsal_right_vY"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="0.5" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="j_tarsal_right_yaw" type="revolute">
+        <parent link="tarsal_right_vY"/>
+        <child link="tarsal_right"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="j_pastern_hindright_roll" type="revolute">
+        <parent link="tarsal_right"/>
+        <child link="pastern_hindright_vX"/>
+        <origin xyz="0.26 0 0.0" rpy="0.0 -0.582 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="j_pastern_hindright_pitch" type="revolute">
+        <parent link="pastern_hindright_vX"/>
+        <child link="pastern_hindright"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-0.5" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="j_coffin_hindright" type="revolute">
+        <parent link="pastern_hindright"/>
+        <child link="coffin_hindright"/>
+        <origin xyz="0.114 0 0.0" rpy="0.0 -1.03 0.0"/>
+        <limit lower="-0.1" upper="0.1" effort="0.0" velocity="0.0"/>
         <axis xyz="0 1 0"/>
     </joint>
 </robot>
