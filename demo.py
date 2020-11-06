@@ -19,13 +19,13 @@ PERIOD = 0.5 # sec
 timestep = 0
 
 while True:
-    target_pos = AMP*np.sin(2*np.pi*1*timestep/(240.*PERIOD)+np.array([0,np.pi/3,2*np.pi/3]))
-    p.setJointMotorControl2(bodyIndex=boxId, jointIndex=0, targetPosition=target_pos[0], controlMode=mode, force=maxForce)
-    p.setJointMotorControl2(bodyIndex=boxId, jointIndex=1, targetPosition=target_pos[1], controlMode=mode, force=maxForce)
-    p.setJointMotorControl2(bodyIndex=boxId, jointIndex=2, targetPosition=target_pos[2], controlMode=mode, force=maxForce)
+    # target_pos = AMP*np.sin(2*np.pi*1*timestep/(240.*PERIOD)+np.array([0,np.pi/3,2*np.pi/3]))
+    # p.setJointMotorControl2(bodyIndex=boxId, jointIndex=0, targetPosition=target_pos[0], controlMode=mode, force=maxForce)
+    # p.setJointMotorControl2(bodyIndex=boxId, jointIndex=1, targetPosition=target_pos[1], controlMode=mode, force=maxForce)
+    # p.setJointMotorControl2(bodyIndex=boxId, jointIndex=2, targetPosition=target_pos[2], controlMode=mode, force=maxForce)
     p.stepSimulation()
-    # cubePos, cubeOrn = p.getBasePositionAndOrientation(boxId)
-    # print(cubePos,cubeOrn)
+    cubePos, cubeOrn = p.getBasePositionAndOrientation(boxId)
+    print(cubePos,cubeOrn)
     time.sleep(1/240.)
     timestep += 1
 
