@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<robot name="horse3d">
+
+    <!-- Colors -->
+    <material name="white">
+        <color rgba="0.9 0.9 0.9 1"/>
+    </material>
+    <material name="black">
+        <color rgba="0.2 0.2 0.2 1"/>
+    </material>
+    <material name="red">
+        <color rgba="0.8 0 0 1"/>
+    </material>
+    <material name="green">
+        <color rgba="0 0.8 0 1"/>
+    </material>
+    <material name="blue">
+        <color rgba="0 0 0.8 1"/>
+    </material>
+    <material name="yellow">
+        <color rgba="0.8 0.8 0 1"/>
+    </material>
+
+
+    <!-- Links -->
+    <link name="body1">
+        <visual>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.5 0.0 0.0" rpy="0.0 1.57079632679 0.0"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.5 0.0 0.0" rpy="0.0 1.57079632679 0.0"/>
+        </collision>
+    </link>
+    <link name="body2">
+        <visual>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="-0.25 -0.43301270189221935 0.0" rpy="0.0 1.57079632679 -2.09439510239"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="-0.25 -0.43301270189221935 0.0" rpy="0.0 1.57079632679 -2.09439510239"/>
+        </collision>
+    </link>
+    <link name="body3">
+        <visual>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="-0.25 0.43301270189221935 0.0" rpy="0.0 1.57079632679 2.09439510239"/>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="-0.25 0.43301270189221935 0.0" rpy="0.0 1.57079632679 2.09439510239"/>
+        </collision>
+    </link>
+    
+    <link name="leg1">
+        <visual>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.5 0.0 0.0" rpy="0.0 1.57079632679 0.0"/>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.5 0.0 0.0" rpy="0.0 1.57079632679 0.0"/>
+        </collision>
+    </link>
+    <link name="leg2">
+        <visual>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.5 0.0 0.0" rpy="0.0 1.57079632679 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.5 0.0 0.0" rpy="0.0 1.57079632679 0.0"/>
+        </collision>
+    </link>
+    <link name="leg3">
+        <visual>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.5 0.0 0.0" rpy="0.0 1.57079632679 0.0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.5 0.0 0.0" rpy="0.0 1.57079632679 0.0"/>
+        </collision>
+    </link>
+
+    <link name="wheel1">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 0.0 0.0"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 0.0 0.0"/>
+        </collision>
+    </link>
+    <link name="wheel2">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 0.0 0.0"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 0.0 0.0"/>
+        </collision>
+    </link>
+    <link name="wheel3">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 0.0 0.0"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="1.57079632679 0.0 0.0"/>
+        </collision>
+    </link>
+
+
+
+
+    <!-- Joints -->
+    <joint name="jBody1" type="fixed">
+        <parent link="body1"/>
+        <child link="body2"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+    </joint>
+    <joint name="jBody2" type="fixed">
+        <parent link="body1"/>
+        <child link="body3"/>
+        <origin xyz="0.0 0 0.0" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="jLeg1" type="revolute">
+        <parent link="body1"/>
+        <child link="leg1"/>
+        <origin xyz="1.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="jLeg2" type="revolute">
+        <parent link="body2"/>
+        <child link="leg2"/>
+        <origin xyz="-0.5 -0.8660254037844386 0.0" rpy="0.0 0.0 -2.09439510239"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    <joint name="jLeg3" type="revolute">
+        <parent link="body3"/>
+        <child link="leg3"/>
+        <origin xyz="-0.5 0.8660254037844386 0.0" rpy="0.0 0.0 2.09439510239"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="jwheel1" type="revolute">
+        <parent link="leg1"/>
+        <child link="wheel1"/>
+        <origin xyz="1.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="jwheel2" type="revolute">
+        <parent link="leg2"/>
+        <child link="wheel2"/>
+        <origin xyz="1.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="jwheel3" type="revolute">
+        <parent link="leg3"/>
+        <child link="wheel3"/>
+        <origin xyz="1.0 0 0.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    
+</robot>
