@@ -7,8 +7,8 @@ import numpy as np
 maxForce = 100
 mode = p.POSITION_CONTROL
 AMP = 1.0 #rad
-MODE = 'translation'
-INVERSE = True
+MODE = 'rotation'
+INVERSE = False
 
 # set translation mode
 if MODE == 'translation': 
@@ -17,7 +17,7 @@ if MODE == 'translation':
         PHASE = np.array([np.pi/4, 0, 0])
     else:
         PERIOD = np.array([2.0, 2.0, 2.0]) # sec
-        PHASE = np.array([np.pi/4, 0, 0])
+        PHASE = np.array([-np.pi/4, 0, 0])
 else:
     if not INVERSE:
         PERIOD = np.array([2.0, 2.0, 2.0]) # sec
