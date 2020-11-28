@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<robot name="horse3d">
+
+
+    <!-- Colors -->
+    <material name="red">
+        <color rgba="0.8 0 0 1"/>
+    </material>
+    <material name="green">
+        <color rgba="0 0.8 0 1"/>
+    </material>
+    <material name="blue">
+        <color rgba="0 0 0.8 1"/>
+    </material>
+    <material name="yellow">
+        <color rgba="0.8 0.8 0 1"/>
+    </material>
+
+
+    <!-- Links -->
+    <link name="link1">
+        <visual>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.5" rpy="0.0 0.0 0.0"/>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.5" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+    <link name="link2">
+        <visual>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.5" rpy="0.0 0.0 0.0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <capsule length="1." radius="0.05"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.5" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+    <!-- Joints -->
+    <joint name="j1" type="revolute">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="0.0 0 1.0" rpy="0.0 0.0 0.0"/>
+        <limit lower="-1" upper="1" effort="0.0" velocity="0.0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+</robot>
