@@ -7,7 +7,7 @@ import numpy as np
 maxForce = 100
 mode = p.POSITION_CONTROL
 AMP = 1.0 #rad
-MODE = 'rotation'
+MODE = 'translation'
 INVERSE = False
 
 # set translation mode
