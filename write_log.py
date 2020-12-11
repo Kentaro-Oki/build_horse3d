@@ -1,10 +1,10 @@
 import numpy as np
 import datetime
 
-class WriteData(object):
+class WriteLog(object):
     """docstring for WriteData."""
     def __init__(self, filename):
-        super(WriteData, self).__init__()
+        super(WriteLog, self).__init__()
         now = datetime.datetime.now()
         self.filename = filename.split('.csv')[0] + now.strftime('_%Y%m%d_%H%M%S') + '.csv'
         title = np.array(['cmd_dir', 's_sensor', 'cf_e', 'cf_g', 'judge',\
@@ -15,6 +15,6 @@ class WriteData(object):
         with open(self.filename, 'a') as f_handle:
             np.savetxt(f_handle, title.reshape(1,-1), delimiter=',', fmt='%s')
 
-    def writeLog(self, data):
+    def __call__(self, data):
         with open(self.filename, 'a') as f_handle:
             np.savetxt(f_handle, data.reshape(1,-1), delimiter=',')
